@@ -25,9 +25,10 @@ btn.addEventListener("click", () => {
   const img = document.createElement("img");
   img.className = "img";
   img.src = "bin_484611-removebg-preview.png";
+  
+noteBox.appendChild(div).appendChild(inputBox).appendChild(divBox);
+  div.appendChild(img);
 
-  div.append(inputBox, divBox, img);
-  noteBox.appendChild(div);
   updateNotes();
   reinitializeEvents();
 });
@@ -41,7 +42,7 @@ noteBox.addEventListener("click", (e) => {
 
 function reinitializeEvents() {
   noteBox.querySelectorAll(".box").forEach(note => {
-    note.onkeyup = updateNotes;
+    note.onkeyup = updateNotes();
   });
 }
 
