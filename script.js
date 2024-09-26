@@ -44,4 +44,3 @@ function reinitializeEvents() {
     note.onkeyup = updateNotes;
   });
 }
-
