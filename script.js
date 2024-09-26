@@ -26,7 +26,7 @@ btn.addEventListener("click", () => {
   img.className = "img";
   img.src = "bin_484611-removebg-preview.png";
   
-noteBox.appendChild(div).appendChild(inputBox).appendChild(divBox);
+document.querySelector(".parent").appendChild(div).appendChild(inputBox).appendChild(divBox);
   div.appendChild(img);
 
   updateNotes();
