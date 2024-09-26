@@ -1,46 +1,47 @@
-
 const noteBox = document.querySelector(".parent");
 const btn = document.querySelector(".btn");
-let notes = document.querySelectorAll(".box");
 
 function showNotes() {
-  noteBox.innerHTML = localStorage.getItem("notes");
+  noteBox.innerHTML = localStorage.getItem("notes") || "";
+  reinitializeEvents();
 }
 showNotes();
-
-function update() {
+function updateNotes() {
   localStorage.setItem("notes", noteBox.innerHTML);
 }
 
 btn.addEventListener("click", () => {
-  let div = document.createElement("div");
-  let inputBox = document.createElement("p");
-  let divBox = document.createElement("div");
-  let img = document.createElement("img");
-
+  const div = document.createElement("div");
   div.className = "bound";
+
+  const inputBox = document.createElement("p");
   inputBox.className = "input";
   inputBox.setAttribute("contenteditable", "true");
 
+  const divBox = document.createElement("div");
   divBox.className = "box";
   divBox.setAttribute("contenteditable", "true");
+
+  const img = document.createElement("img");
   img.className = "img";
   img.src = "bin_484611-removebg-preview.png";
 
-  noteBox.appendChild(div).appendChild(inputBox).appendChild(divBox);
-  div.appendChild(img);
+  div.append(inputBox, divBox, img);
+  noteBox.appendChild(div);
+  updateNotes();
+  reinitializeEvents();
 });
 
-noteBox.addEventListener("click", function (e) {
+noteBox.addEventListener("click", (e) => {
   if (e.target.tagName === "IMG") {
     e.target.parentElement.remove();
-    update();
-  } else if (e.target.tagName === "DIV") {
-    notes = document.querySelectorAll(".box");
-    notes.forEach(notes => {
-      notes.onkeyup = function () {
-        update();
-      };
-    });
+    updateNotes();
   }
 });
+
+function reinitializeEvents() {
+  noteBox.querySelectorAll(".box").forEach(note => {
+    note.onkeyup = updateNotes;
+  });
+}
+
