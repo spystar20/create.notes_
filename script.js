@@ -2,7 +2,7 @@ const noteBox = document.querySelector(".parent");
 const btn = document.querySelector(".btn");
 
 function showNotes() {
-  noteBox.innerHTML = localStorage.getItem("notes") || "";
+  noteBox.innerHTML = localStorage.getItem("notes");
   reinitializeEvents();
 }
 showNotes();
