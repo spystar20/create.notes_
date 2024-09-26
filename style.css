@@ -50,7 +50,7 @@ html {
   .input {
     color: black;
     outline: none;
-    border-radius: 2rem;
+    border-radius: 1rem;
     top: -4%;
     padding: 1rem;
     position: relative;
@@ -61,6 +61,9 @@ html {
     scrollbar-width: none;
     font-size: 1.3rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .parent {
     border-radius: 2rem;
@@ -88,20 +91,19 @@ html {
         text-align: center;
         border-radius: 2rem;
         position: absolute;
-        height: 10rem;
-        width: 13.6rem;
+        height: 15vh;
+        width: 63vw;
         background-color: #aba10f;
         padding: 1rem;
+      bottom: 3%;
   
   }
   .img {
-
-    padding: 0%;
+      padding: 0%;
     right: 13%;
-    height: 2rem;
-    width: 2rem;
+    height: 1.7rem;
+    width: 1.7rem;
     position: relative;
-    /* right: 0%; */
     top: 7%;
    }
   
@@ -180,6 +182,7 @@ align-items: flex-start; */
   border: 2px solid #36251d;
   row-gap: 2rem;
   column-gap: 0px;
+
 }
 .input {
   color: black;
@@ -195,29 +198,33 @@ align-items: flex-start; */
   scrollbar-width: none;
   font-size: 1.3rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .box{
   overflow-y: auto;
   scrollbar-width: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: center;
   border-radius: 2rem;
   position: absolute;
-  height: 10rem;
-  width: 12.7rem;
+  height: 22vh;
+  width: 20vw;
   background-color: #aba10f;
   padding: 1rem;
+  bottom: 6%;
 
 }
  .img {
 
   padding: 0%;
   right: 14%;
-  height: 2rem;
-  width: 2rem;
+  height: 1.6rem;
+  width: 1.6rem;
   position: relative;
   /* right: 0%; */
-  top: 7%;
+  
  }
 
   .bound {
@@ -296,11 +303,11 @@ align-items: flex-start; */
 .input {
   color: black;
   outline: none;
-  border-radius: 2rem;
+  border-radius: 1rem;
   top: -4%;
   padding: 1rem;
   position: relative;
-  background: yellow;
+  background: rgba(255, 255, 0, 0.922);
   height: 30vh;
   width: 22vw;
   overflow-y: auto;
@@ -315,21 +322,24 @@ align-items: flex-start; */
   text-align: center;
   border-radius: 2rem;
   position: absolute;
-  height: 10rem;
-  width: 10.6rem;
+  height: 26vh;
+  width: 18vw;
   background-color: #aba10f;
+  color:black ;
   padding: 1rem;
+  bottom: 1%;
+  left: 1%;
 
 }
  .img {
 
   padding: 0%;
   right: 14%;
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   position: relative;
   /* right: 0%; */
-  top: 7%;
+  top: 1%;
  }
 
   .bound {
